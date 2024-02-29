@@ -1,43 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Company Profile</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TigaDuaEnam</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
     <header>
-      <img src="logo.png" alt="My Company Logo" />
-      <ul class="navigation">
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact Us</li>
-      </ul>
+        <img src=assets/logo.jpg alt="Logo" width="50" height="50">
+        <ul class="navigation">
+            <li><button id="nav-buttons"><a href="index.html">Home</a></li>
+            <li><button id="nav-buttons"><a href="profile.html" target="_blank">About</a></li>
+            <li><button id="nav-buttons" onclick="scrollToTargetDiv()">Contact Us</button></li>
+        </ul>
     </header>
-
-    <div class="dashboard">
-      <h1>Hi! Welcome to My Company</h1>
-      <p>
-        We are a company that specializes in creating amazing web applications
-        and websites.
-      </p>
-
-      <h1>Our projects</h1>
-    <div class="projects">
-      <div>
-        <div class="circle-image" style="background-image: url('')"></div>
-        <h3>Project 1</h3>
-      </div>
-      <div>
-        <div class="circle-image"></div>
-        <h3>Project 2</h3>
-      </div>
-      <div>
-        <div class="circle-image"></div>
-        <h3>Project 3</h3>
-      </div>
+<div class="our-profile">
+    <p>Hi! Welcome to TigaDuaEnam Shop!</p>
+    <div id="brief"><p>Step into a realm where creativity meets craftsmanship, and every stitch tells a story. Our handmade beaded bags are more than just accessories. They are reflections of dedication, passion, and timeless beauty.</p></div>
+</div>
+<br>
+<div class="banner" style="background-image: url(assets/pretty_beads.jpeg);"></div>
+<br>
+<div class="works">
+    <h1>Lets take a look to our works!</h1>
+</div>
+<br>
+    <div class="work-list">
+        <div>
+            <div class="icon" style="background-image: url('assets/work1.jpg');"></div>
+            <div class="icon-text"><p>"Sa" Beaded Sling Bag</p></div>
+        </div>
+        <div>
+            <div class="icon" style="background-image: url('assets/work2.jpg');"></div>
+            <div class="icon-text"><p>"Rwa" Beaded Sling Bag</p></div>
+        </div>
+        <div>
+            <div class="icon" style="background-image: url('assets/work3.jpg');"></div>
+            <div class="icon-text"><p>"Telu" Beaded Sling Bag</p></div>
+        </div>
+        <div>
+            <div class="icon" style="background-image: url('assets/work4.jpg');"></div>
+            <div class="icon-text"><p>"Pat" Beaded Sling Bag</p></div>
+        </div>
+        <div>
+            <div class="icon" style="background-image: url('assets/work5.jpg')"></div>
+            <div class="icon-text"><p>"Lima" Beaded Sling Bag</p></div>
+        </div>
     </div>
-  </body>
+<br>
+<div class="contactUs">
+<h1>Contact Us</h1>
+    <div id="inputForm">
+        <div class="message-form">
+        <form name="message-form" onsubmit="return validateForm()">
+            <b>Name:</b><input placeholder="Name" type="text" name="full-name" />
+            <br>
+            <b>Birth Date</b>: <input type="date" name="birth-date" />
+            <br>
+            <b>Gender:</b>
+            <input type="radio" id="male" name="gender" value="Male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" />
+            <label for="female">Female</label>
+            <br>
+            <b>Message:</b>
+            <textarea placeholder="Let us know what your opinion are..." name="messages"></textarea>
+            <br>
+            <input type="submit" value="Submit Form" />
+        </form></div>
+        <ul id="Form">
+            <li><b>Name:</b> <span id="form-full-name"></span></li>
+            <li><b>Birth Date:</b> <span id="form-birth-date"></span></li>
+            <li><b>Gender:</b> <span id="form-gender"></span></li>
+            <li><b>Message:</b> <i><span id="form-messages"></span></i></li>
+        </ul>
+    </div>
+</div>
+</body>
+<br>
+<br>
+<br>
+<footer>
+    <div id="madeBy"><p>Made with pleasure by Adivia Khusnul Aisha</p></div>
+</footer>
 </html>
